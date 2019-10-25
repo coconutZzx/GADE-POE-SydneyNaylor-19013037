@@ -8,8 +8,8 @@ public class MapManager : MonoBehaviour
     public Slider sliderWidth;
     public Slider sliderLength;
 
-    public static int width;
-    public static int length;
+    public static int width = 10;
+    public static int length = 10;
 
     public static bool inMenu = true;
 
