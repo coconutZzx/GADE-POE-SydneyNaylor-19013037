@@ -2,8 +2,8 @@
 
 public class CameraController : MonoBehaviour
 {
-    public float panSpeed = 10f;
-    public float panBorderThickness = 10f;
+    public float panSpeed = 20f;
+    public float panBorderThickness = 10f;  // within 10 pixels on border screen moves with mouse
     public Vector2 panLimit;
 
     public float scrollSpeed = 20f;
@@ -17,24 +17,24 @@ public class CameraController : MonoBehaviour
         // x,y,z stored in pos
         Vector3 pos = transform.position;
 
-        if (Input.GetKey("W") || Input.mousePosition.y >= Screen.height - panBorderThickness)  // || Input.mousePosition.y >= Screen.height - panBorderThickness
+        if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)  // || Input.mousePosition.y >= Screen.height - panBorderThickness
         {
             //increases z value
             pos.z += panSpeed * Time.deltaTime; 
         }
-        if (Input.GetKey("S") || Input.mousePosition.y <= Screen.height - panBorderThickness)  // || Input.mousePosition.y <= Screen.height - panBorderThickness
+
+        if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)  
         {
-            //increases z value
             pos.z -= panSpeed * Time.deltaTime;
         }
-        if (Input.GetKey("D") || Input.mousePosition.x >= Screen.height - panBorderThickness)  // || Input.mousePosition.x >= Screen.height - panBorderThickness
+
+        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness)   
         {
-            //increases z value
             pos.x += panSpeed * Time.deltaTime;
         }
-        if (Input.GetKey("A") || Input.mousePosition.x <= Screen.height - panBorderThickness)  // || Input.mousePosition.x <= Screen.height - panBorderThickness
+
+        if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)  
         {
-            //increases z value
             pos.x -= panSpeed * Time.deltaTime;
         }
 
