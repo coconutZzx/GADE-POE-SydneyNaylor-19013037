@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4116193496297676555}
   - component: {fileID: 4116193496297676552}
   - component: {fileID: 4116193496297676553}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MeleeUnit-RED
   m_TagString: Untagged
   m_Icon: {fileID: 0}

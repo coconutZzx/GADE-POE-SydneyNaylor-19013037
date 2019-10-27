@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6269885447220131974}
   - component: {fileID: 6269885447220131969}
   - component: {fileID: 6269885447220131968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WizardUnit-GREEN
   m_TagString: Untagged
   m_Icon: {fileID: 0}

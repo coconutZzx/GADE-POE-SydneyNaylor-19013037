@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4263060218043704027}
   - component: {fileID: 7560576072502024116}
   - component: {fileID: 3053825779812941616}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RangedUnit-BLUE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
