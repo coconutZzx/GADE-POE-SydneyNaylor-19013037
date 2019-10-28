@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class UnitController : MonoBehaviour
 {
-    private int health = 500;
+    private int health = 250;
     public int Health { get { return health; } set { health = value; } }
     private int attack = 10;
-    private int attackRange = 5;
+    private int attackRange = 2;
     private int speed = 2;
     private int attackCounter = 0;
     private int attackSpeed = 50;
@@ -38,34 +38,37 @@ public class UnitController : MonoBehaviour
 
     private void Attack(GameObject closestUnit)
     {
-        UnitController uc = closestUnit.GetComponent<UnitController>();
-        if(uc == null)
+        if (this.tag != "TeamGreen")
         {
-            BuildingController bc = closestUnit.GetComponent<BuildingController>();
-
-            Vector3 currentPosition = transform.position;
-            float distance = Vector3.Distance(closestUnit.transform.position, currentPosition);
-
-            if (distance <= attackRange)
+            UnitController uc = closestUnit.GetComponent<UnitController>();
+            if (uc == null)
             {
-                bc.Health -= attack;
-                if (bc.Health <= 0)
+                BuildingController bc = closestUnit.GetComponent<BuildingController>();
+
+                Vector3 currentPosition = transform.position;
+                float distance = Vector3.Distance(closestUnit.transform.position, currentPosition);
+
+                if (distance <= attackRange)
                 {
-                    Destroy(closestUnit);
+                    bc.Health -= attack;
+                    if (bc.Health <= 0)
+                    {
+                        Destroy(closestUnit);
+                    }
                 }
             }
-        }
-        else
-        {
-            Vector3 currentPosition = transform.position;
-            float distance = Vector3.Distance(closestUnit.transform.position, currentPosition);
-
-            if (distance <= attackRange)
+            else
             {
-                uc.Health -= attack;
-                if (uc.Health <= 0)
+                Vector3 currentPosition = transform.position;
+                float distance = Vector3.Distance(closestUnit.transform.position, currentPosition);
+
+                if (distance <= attackRange)
                 {
-                    Destroy(closestUnit);
+                    uc.Health -= attack;
+                    if (uc.Health <= 0)
+                    {
+                        Destroy(closestUnit);
+                    }
                 }
             }
         }
@@ -126,6 +129,9 @@ public class UnitController : MonoBehaviour
                 }
             }
         }
+
+
+
         if (this.tag == "TeamBlue")
         {
             GameObject[] team1 = GameObject.FindGameObjectsWithTag("TeamRed");
@@ -151,6 +157,9 @@ public class UnitController : MonoBehaviour
                 }
             }
         }
+
+
+
         if (this.tag == "TeamGreen")
         {
             GameObject[] team1 = GameObject.FindGameObjectsWithTag("TeamBlue");
@@ -163,6 +172,16 @@ public class UnitController : MonoBehaviour
                     target = unit;
                     minDistance = distance;
                 }
+
+                if (distance <= attackRange)
+                {
+                    UnitController uc = unit.GetComponent<UnitController>();
+                    uc.Health -= attack;
+                    if (uc.Health <= 0)
+                    {
+                        Destroy(unit);
+                    }
+                }
             }
             GameObject[] team2 = GameObject.FindGameObjectsWithTag("TeamRed");
             foreach (GameObject unit in team2)
@@ -173,6 +192,16 @@ public class UnitController : MonoBehaviour
                 {
                     target = unit;
                     minDistance = distance;
+                }
+
+                if (distance <= attackRange)
+                {
+                    UnitController uc = unit.GetComponent<UnitController>();
+                    uc.Health -= attack;
+                    if (uc.Health <= 0)
+                    {
+                        Destroy(unit);
+                    }
                 }
             }
         }
