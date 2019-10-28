@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 8044841528391562421, guid: eaab20c0642083941b3f25f2ef71fb47,
         type: 3}
       propertyPath: m_Name
-      value: ResourceBuilding
+      value: ResourceBuilding-RED
+      objectReference: {fileID: 0}
+    - target: {fileID: 8044841528391562421, guid: eaab20c0642083941b3f25f2ef71fb47,
+        type: 3}
+      propertyPath: m_TagString
+      value: TeamRed
       objectReference: {fileID: 0}
     - target: {fileID: 7742456931920357183, guid: eaab20c0642083941b3f25f2ef71fb47,
         type: 3}

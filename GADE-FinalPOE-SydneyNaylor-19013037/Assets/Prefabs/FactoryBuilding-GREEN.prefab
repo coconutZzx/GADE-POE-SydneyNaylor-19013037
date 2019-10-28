@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 4080971720488340064, guid: d2be074c3fcdf904980c8dfff364aab8,
         type: 3}
       propertyPath: m_Name
-      value: Cylinder
+      value: FactoryBuilding-GREEN
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080971720488340064, guid: d2be074c3fcdf904980c8dfff364aab8,
+        type: 3}
+      propertyPath: m_TagString
+      value: TeamGreen
       objectReference: {fileID: 0}
     - target: {fileID: 5119023674619357261, guid: d2be074c3fcdf904980c8dfff364aab8,
         type: 3}

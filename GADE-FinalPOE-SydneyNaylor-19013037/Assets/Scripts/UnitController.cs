@@ -39,15 +39,34 @@ public class UnitController : MonoBehaviour
     private void Attack(GameObject closestUnit)
     {
         UnitController uc = closestUnit.GetComponent<UnitController>();
-        Vector3 currentPosition = transform.position;
-        float distance = Vector3.Distance(closestUnit.transform.position, currentPosition);
-
-        if (distance <= attackRange)
+        if(uc == null)
         {
-            uc.Health -= attack;
-            if (uc.Health <= 0 )
+            BuildingController bc = closestUnit.GetComponent<BuildingController>();
+
+            Vector3 currentPosition = transform.position;
+            float distance = Vector3.Distance(closestUnit.transform.position, currentPosition);
+
+            if (distance <= attackRange)
             {
-                Destroy(closestUnit);
+                bc.Health -= attack;
+                if (bc.Health <= 0)
+                {
+                    Destroy(closestUnit);
+                }
+            }
+        }
+        else
+        {
+            Vector3 currentPosition = transform.position;
+            float distance = Vector3.Distance(closestUnit.transform.position, currentPosition);
+
+            if (distance <= attackRange)
+            {
+                uc.Health -= attack;
+                if (uc.Health <= 0)
+                {
+                    Destroy(closestUnit);
+                }
             }
         }
     }
@@ -73,6 +92,30 @@ public class UnitController : MonoBehaviour
             }
             GameObject[] team2 = GameObject.FindGameObjectsWithTag("TeamGreen");
             foreach (GameObject unit in team2)
+            {
+                float distance = Vector3.Distance(unit.transform.position, currentPosition);
+
+                if (distance < minDistance)
+                {
+                    target = unit;
+                    minDistance = distance;
+                }
+            }
+
+
+            GameObject[] team3 = GameObject.FindGameObjectsWithTag("TeamBlue");
+            foreach (GameObject unit in team3)
+            {
+                float distance = Vector3.Distance(unit.transform.position, currentPosition);
+
+                if (distance < minDistance)
+                {
+                    target = unit;
+                    minDistance = distance;
+                }
+            }
+            GameObject[] team4 = GameObject.FindGameObjectsWithTag("TeamGreen");
+            foreach (GameObject unit in team4)
             {
                 float distance = Vector3.Distance(unit.transform.position, currentPosition);
 

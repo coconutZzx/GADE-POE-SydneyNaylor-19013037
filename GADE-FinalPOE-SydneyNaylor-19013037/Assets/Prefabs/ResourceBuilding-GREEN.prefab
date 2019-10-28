@@ -53,6 +53,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4903098888795208606, guid: 2313780caf40165499564dc2c69eeeda,
+        type: 3}
+      propertyPath: m_TagString
+      value: TeamGreen
+      objectReference: {fileID: 0}
     - target: {fileID: 4673875804315805716, guid: 2313780caf40165499564dc2c69eeeda,
         type: 3}
       propertyPath: m_LocalPosition.x
