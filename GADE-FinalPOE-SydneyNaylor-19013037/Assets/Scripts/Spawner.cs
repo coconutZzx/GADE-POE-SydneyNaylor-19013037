@@ -11,21 +11,21 @@ public class Spawner : MonoBehaviour
     public LayerMask nonPlaceableMask;
     void Start()
     {
-        UnitSpawn();
-        // StartCoroutine(UnitSpawner());
+        // UnitSpawn();
+        StartCoroutine(UnitSpawner());
         // StopCoroutine(UnitSpawner()); ??
     }
-    
+
     void UnitSpawn()
     {
         for (int i = 0; i < unitAmount; i++)
         {
             x = Random.Range((-MapManager.width / 2 + 1), (MapManager.width / 2) - 1);
             z = Random.Range((-MapManager.length / 2 + 1), (MapManager.length / 2) - 1);
-            
+
             bool isPlaceable = !(Physics.CheckSphere(new Vector3(x, 1, z), 1f, nonPlaceableMask));
 
-            while (isPlaceable == false)
+            while (isPlaceable == true)
             {
                 x = Random.Range((-MapManager.width / 2 + 1), (MapManager.width / 2) - 1);
                 z = Random.Range((-MapManager.length / 2 + 1), (MapManager.length / 2) - 1);
@@ -45,5 +45,6 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(0.0f);
             unitAmount += 1;
         }
+
     }
 }

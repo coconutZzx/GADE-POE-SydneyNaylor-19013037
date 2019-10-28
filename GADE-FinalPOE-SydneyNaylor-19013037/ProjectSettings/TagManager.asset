@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Building
+  - BuildingR
+  - BuildingB
+  - BuildingG
+  - FactoryBuildingR
+  - FactoryBuildingB
+  - FactoryBuildingG
+  - TeamBlue
+  - TeamRed
+  - TeamGreen
   layers:
   - Default
   - TransparentFX

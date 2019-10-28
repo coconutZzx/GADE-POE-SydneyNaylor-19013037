@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2755988514417098270}
   - component: {fileID: 2457383264471590657}
   - component: {fileID: 8419160835509329254}
+  - component: {fileID: 4055774316605613672}
   m_Layer: 9
   m_Name: FactoryBuilding-BLUE
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +94,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &4055774316605613672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4080971720488340064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129a49ee1eea2af47bb888f1877807e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5334308065340480992
 GameObject:
   m_ObjectHideFlags: 0
