@@ -16,7 +16,7 @@ public class BuildingSpawner : MonoBehaviour
 
     IEnumerator BuildingsSpawner()
     {
-        while (buildingAmount < 1)
+        while (buildingAmount < MapManager.width * MapManager.length / 100)
         {
             x = Random.Range((-MapManager.width / 2 + 1), (MapManager.width / 2) - 1);
             z = Random.Range((-MapManager.length / 2 + 1), (MapManager.length / 2) - 1);

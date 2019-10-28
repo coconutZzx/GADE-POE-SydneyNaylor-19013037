@@ -15,7 +15,7 @@ public class WizardSpawner : MonoBehaviour
 
     IEnumerator UnitSpawner()
     {
-        while (unitAmount < 2)
+        while (unitAmount < MapManager.width * MapManager.length / 50)
         {
             x = Random.Range((-MapManager.width / 2 + 1), (MapManager.width / 2) - 1);
             z = Random.Range((-MapManager.length / 2 + 1), (MapManager.length / 2) - 1);
