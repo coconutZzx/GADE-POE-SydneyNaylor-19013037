@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13492bbaeb49cd3489a136fd16c90744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit: {fileID: 6269885447220131971, guid: 1b41eb2338e4a1a439cec14c4f92f0f7, type: 3}
+  unit: {fileID: 2423250656077299157, guid: 9bd2a26428bfcc54bab03520fddb6ed1, type: 3}
   x: 0
   z: 0
   unitAmount: 0
@@ -457,13 +457,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 31.3, z: -0}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 22.5, z: -27.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!114 &534669906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,7 +480,7 @@ MonoBehaviour:
   panBorderThickness: 10
   panLimit: {x: 50, y: 100}
   scrollSpeed: 25
-  minY: 20
+  minY: 10
   maxY: 200
 --- !u!1 &563571388
 GameObject:
@@ -573,7 +573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0deb0e651126a2458d57a063255490e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit: {fileID: 3089919478914668993, guid: bd75d5a3b6a7d6a468d7d18da2877c78, type: 3}
+  unit: {fileID: 6894362178759310066, guid: 1b60c39f9f9f7f84b9a815b5cb741a1f, type: 3}
   x: 0
   z: 0
   unitAmount: 0
@@ -715,7 +715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720657534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.04, z: 0}
+  m_LocalPosition: {x: 0, y: -0.58, z: 0}
   m_LocalScale: {x: 10, y: 0.5, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -937,7 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0deb0e651126a2458d57a063255490e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit: {fileID: 2881570130449148126, guid: df54f175dd27ee244b7b81147afbe30b, type: 3}
+  unit: {fileID: 1024376074436626491, guid: f93266ee90aad524cb80917e5ce76a1d, type: 3}
   x: 0
   z: 0
   unitAmount: 0
@@ -987,7 +987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0deb0e651126a2458d57a063255490e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit: {fileID: 4116193496297676550, guid: afcec3f02cebd014098eddc053460077, type: 3}
+  unit: {fileID: 7278938449941715284, guid: a732b6275988d6c4eb4375cab0039910, type: 3}
   x: 0
   z: 0
   unitAmount: 0
@@ -1469,7 +1469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0deb0e651126a2458d57a063255490e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit: {fileID: 4018678020709360563, guid: 319a6b62646896b44bc1fcd8df7a366b, type: 3}
+  unit: {fileID: 7278938449941715284, guid: 50b4f6c03fe7e3b4fb2c4b0afa110450, type: 3}
   x: 0
   z: 0
   unitAmount: 0

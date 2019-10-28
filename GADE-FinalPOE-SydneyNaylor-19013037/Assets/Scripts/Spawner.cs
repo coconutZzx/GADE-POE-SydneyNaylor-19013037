@@ -41,7 +41,7 @@ public class Spawner : MonoBehaviour
         {
             x = Random.Range((-MapManager.width/2 + 1), (MapManager.width/2) - 1);
             z = Random.Range((-MapManager.length/2 + 1), (MapManager.length/2) - 1);
-            Instantiate(unit, new Vector3(x, 1, z), Quaternion.identity);
+            Instantiate(unit, new Vector3(x, 0, z), Quaternion.identity);
             yield return new WaitForSeconds(0.0f);
             unitAmount += 1;
         }
